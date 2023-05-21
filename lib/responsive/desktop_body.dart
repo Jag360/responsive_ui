@@ -6,10 +6,11 @@ class MyDesktopBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[200],
+      backgroundColor: Colors.green[200],
 
       appBar: AppBar(
         title: Text("D E S K T O P"),
+        backgroundColor: Colors.green,
       ),
 
       body: Padding(
@@ -30,7 +31,7 @@ class MyDesktopBody extends StatelessWidget {
                       aspectRatio: 16/9,
                       child: Container(
                         height: 250,
-                        color: Colors.blue[400],
+                        color: Colors.green[400],
                       ),
                     ),
                   ),
@@ -42,7 +43,7 @@ class MyDesktopBody extends StatelessWidget {
                         itemBuilder: (context, index){
                           return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(color: Colors.blue[300],
+                            child: Container(color: Colors.green[300],
                               height: 120,
                             ),
                           );
@@ -55,9 +56,12 @@ class MyDesktopBody extends StatelessWidget {
             // Second Column
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 200,
-                color: Colors.green[300],
+              child: AspectRatio(
+                aspectRatio: 1/3,
+                child: Container(
+                  color: Colors.green[300],
+                  width : 250,
+                ),
               ),
             )
           ],
